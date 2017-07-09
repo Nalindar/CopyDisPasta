@@ -19,11 +19,18 @@ namespace CopyDisPasta
         
         public static void SetFocusToDiscord()
         {
-            Process discordPID = Process.GetProcessById(5948);
-
-            IntPtr discordhandler = discordPID.MainWindowHandle;
-            Thread.Sleep(100);
-            SetForegroundWindow(discordhandler);    
+            Process[] discordProcs = Process.GetProcessesByName("discord");
+            if (discordProcs.Length > 0)
+            {
+                for (int i = 0; i < discordProcs.Length; i++)
+                {
+                    if (discordProcs[i].MainWindowHandle.ToInt32() > 0)
+                    {
+                        Thread.Sleep(100);
+                        SetForegroundWindow(discordProcs[i].MainWindowHandle);
+                    }
+                }
+            }
         }
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
