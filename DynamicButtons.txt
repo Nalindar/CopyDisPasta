@@ -1,0 +1,3 @@
+﻿aka-steve.com | http://aka-steve.com/downloads -- follow the steps, get thwarglauncher, type in a name/pw combo (no spaces or special characters) -- account is created on first login
+Export Decal | go to decal agent -- export -- check the 'locations' box -- copy to clipboard -- http://pastebin.com/ -- paste it in the blank space - scroll down and click 'create new paste' -- give link
+ACClient Ver. | go to your AC folder (default C:\\Turbine\\Asheron's Call) and right click acclient.exe - properties - details tab -- what version is it?

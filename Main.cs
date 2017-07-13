@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,19 +18,40 @@ namespace CopyDisPasta
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void LoadButtons()
         {
-            CopyPasta.PasteToDiscord("http://aka-steve.com/downloads -- follow the steps, get thwarglauncher, type in a name/pw combo (no spaces or special characters) -- account is created on first login");
+            using (StreamReader reader = File.OpenText("DynamicButtons.txt"))
+            {
+                string line;
+                int index = 0;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    int offset = line.IndexOf("|");
+                    string title = line.Substring(0, offset - 1).Trim();
+                    string description = line.Substring(offset + 1).Trim();
+                    Button newButton = new Button();
+                    newButton.Click += NewButton_Click;
+                    newButton.Text = title;
+                    newButton.Tag = description;
+                    newButton.Height = 50;
+                    newButton.Width = 150;
+                    this.flowLayoutPanel1.Controls.Add(newButton);
+                    ++index;
+                }
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void NewButton_Click(object sender, EventArgs e)
         {
-            CopyPasta.PasteToDiscord("go to decal agent -- export -- check the 'locations' box -- copy to clipboard -- http://pastebin.com/ -- paste it in the blank space - scroll down and click 'create new paste' -- give link");
+            var button = (sender as Button);
+            string text = button.Tag.ToString();
+            MessageBox.Show("alt tab this: " + text);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
-            CopyPasta.PasteToDiscord("go to your AC folder (default C:\\Turbine\\Asheron's Call) and right click acclient.exe - properties - details tab -- what version is it?");
+            LoadButtons();
         }
     }
 }
