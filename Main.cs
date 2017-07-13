@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -19,8 +20,14 @@ namespace CopyDisPasta
         }
 
 
-        private void LoadButtons()
+        private void LoadButtons(string bunkArg)
         {
+            if(this.InvokeRequired)
+            {
+                Action<string> delegateAction = LoadButtons;
+                Invoke(delegateAction, "MODIFY BY THREAD");
+                return;
+            }
             using (StreamReader reader = File.OpenText("DynamicButtons.txt"))
             {
                 string line;
@@ -46,12 +53,35 @@ namespace CopyDisPasta
         {
             var button = (sender as Button);
             string text = button.Tag.ToString();
-            MessageBox.Show("alt tab this: " + text);
+            CopyPasta.PasteToDiscord(text);
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            LoadButtons();
+            LoadButtons("");
+        }
+
+        private void btnAddButton_Click(object sender, EventArgs e)
+        {
+            var process = Process.Start("notepad.exe", "DynamicButtons.txt");
+            process.EnableRaisingEvents = true;
+            process.Exited += Process_Exited;
+        }
+        private void ClearButtons(string bunkArgs)
+        {
+            if (this.InvokeRequired)
+            {
+                Action<string> delegateAction = ClearButtons;
+                Invoke(delegateAction, "MODIFY BY THREAD");
+                return;
+            }
+            flowLayoutPanel1.Controls.Clear();
+        }
+
+        private void Process_Exited(object sender, EventArgs e)
+        {
+            ClearButtons("");
+            LoadButtons("");
         }
     }
 }

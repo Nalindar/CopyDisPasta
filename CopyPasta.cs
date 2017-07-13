@@ -31,6 +31,10 @@ namespace CopyDisPasta
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Please open discord.", "Discord was not identified as open.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
