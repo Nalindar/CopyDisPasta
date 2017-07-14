@@ -1,3 +1,4 @@
-﻿aka-steve.com | http://aka-steve.com/downloads -- follow the steps, get thwarglauncher, type in a name/pw combo (no spaces or special characters) -- account is created on first login
-Export Decal | go to decal agent -- export -- check the 'locations' box -- copy to clipboard -- http://pastebin.com/ -- paste it in the blank space - scroll down and click 'create new paste' -- give link
-ACClient Ver. | go to your AC folder (default C:\\Turbine\\Asheron's Call) and right click acclient.exe - properties - details tab -- what version is it?
+﻿aka-steve.com | http://aka-steve.com/downloads -> Follow the steps to install and update AC -> Download ThwargLauncher at http://thwargle.com -> Type in a name/pw combination; Your account is created on first login.
+Export Decal | Go to decal agent -> Click Export -> Check the 'locations' box -> Click copy to clipboard -> Head to http://pastebin.com/ -> Paste it in the blank space, Scroll down and click 'create new paste' -> Copy the URL into discord for me please.
+ACClient Ver. | Go to your AC folder (default C:\\Turbine\\Asheron's Call) and right click acclient.exe -> Click Properties -> Click the Details tab. What version is it?
+Non-TN GoArrow | Open your GoArrow -> Click Atlas -> Click the Update Tab -> Paste in http://maps.roogon.com/downloads/data_cod_Non_TN.xml in the URL box -> Click the Update button.
