@@ -43,6 +43,12 @@ namespace CopyDisPasta
                     newButton.Tag = description;
                     newButton.Height = 50;
                     newButton.Width = 150;
+                    newButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+                    newButton.FlatAppearance.BorderSize = 0;
+                    newButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                    newButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
+                    newButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
                     this.flowLayoutPanel1.Controls.Add(newButton);
                     ++index;
                 }
