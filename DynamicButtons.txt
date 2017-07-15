@@ -10,3 +10,4 @@ ChaosHelper | ChaosHelper HUD plugin -> http://www.immortalbob.com/phpBB3/viewto
 MiniMap | Need both: Radar Addon VVS ->  http://virindi.net/plugins/files/get.php?id=33 and Minimap -> https://cdn.discordapp.com/attachments/276075310116765696/332308721504092162/MiniMap_v1.1.0.118.zip
 Treestats | Treestats -> http://treestats.net/
 Population | Population graph -> http://treestats.net/player_counts/
+Feb2010 DX | Make a c:\directx folder -> download the feb 2010 directx runtimes https://www.microsoft.com/en-us/download/confirmation.aspx?id=9033 -> unzip to the folder you made. Run DXSETUP.exe
