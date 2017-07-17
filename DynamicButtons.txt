@@ -2,6 +2,7 @@
 Export Decal | Go to decal agent -> Click Export -> Check the 'locations' box -> Click copy to clipboard -> Head to http://pastebin.com/ -> Paste it in the blank space, Scroll down and click 'create new paste' -> Copy the URL into discord for me please.
 ACClient Ver. | Go to your AC folder (default C:\\Turbine\\Asheron's Call) and right click acclient.exe -> Click Properties -> Click the Details tab. What version is it?
 Non-TN GoArrow | Open your GoArrow -> Click Atlas -> Click the Update Tab -> Paste in http://maps.roogon.com/downloads/data_cod_Non_TN.xml in the URL box -> Click the Update button.
+QuestStatus | http://aka-steve.com/helpdocs -> Check out the PhatAC Quest Status document link. It's a google doc with tabs across the bottom for quest type with the status of tested quests.
 BundleGuide | Beginner Bundle Guide - http://www.virindi.net/wiki/index.php/BeginnerBundleGuide
 Looting/Profile | Guide -> http://www.virindi.net/wiki/index.php/BeginnerBundleGuide#Virindi_Classic_Looter | Profile with many trophies already added -> http://immortalbob.com/phpBB3/viewtopic.php?f=4&t=3
 ChaosControl | ChaosControl meta -> http://www.immortalbob.com/phpBB3/viewtopic.php?f=6&t=214 
