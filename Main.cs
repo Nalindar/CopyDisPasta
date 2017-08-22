@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CopyDisPasta.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,21 @@ namespace CopyDisPasta
             InitializeComponent();
         }
 
+        private void LoadWindowPosition()
+        {
+            if(Settings.Default.WindowLocation != null && Settings.Default.WindowSize.Height != 0 && Settings.Default.WindowSize.Width != 0)
+            {
+                this.Location = Settings.Default.WindowLocation;
+                this.Size = Settings.Default.WindowSize;
+            }
+        }
+
+        private void SaveWindowPosition()
+        {
+            Settings.Default.WindowLocation = this.Location;
+            Settings.Default.WindowSize = this.Size;
+            Settings.Default.Save();
+        }
 
         private void LoadButtons(string bunkArg)
         {
@@ -72,6 +88,7 @@ namespace CopyDisPasta
 
         private void Main_Load(object sender, EventArgs e)
         {
+            LoadWindowPosition();
             LoadButtons("");
         }
 
@@ -110,6 +127,11 @@ namespace CopyDisPasta
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveWindowPosition();
         }
     }
 }
