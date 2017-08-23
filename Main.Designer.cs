@@ -29,21 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddButton = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.tcButtonHousing = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAddTab = new System.Windows.Forms.Button();
+            this.tcButtonHousing.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 57);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(507, 175);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnAddButton
             // 
@@ -86,6 +79,57 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // tcButtonHousing
+            // 
+            this.tcButtonHousing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tcButtonHousing.Controls.Add(this.tabPage1);
+            this.tcButtonHousing.Controls.Add(this.tabPage2);
+            this.tcButtonHousing.Location = new System.Drawing.Point(12, 49);
+            this.tcButtonHousing.Name = "tcButtonHousing";
+            this.tcButtonHousing.SelectedIndex = 0;
+            this.tcButtonHousing.Size = new System.Drawing.Size(507, 183);
+            this.tcButtonHousing.TabIndex = 3;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(499, 157);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnAddTab
+            // 
+            this.btnAddTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.btnAddTab.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.btnAddTab.FlatAppearance.BorderSize = 0;
+            this.btnAddTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.btnAddTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(70)))), ((int)(((byte)(77)))));
+            this.btnAddTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
+            this.btnAddTab.Location = new System.Drawing.Point(16, 12);
+            this.btnAddTab.Name = "btnAddTab";
+            this.btnAddTab.Size = new System.Drawing.Size(96, 29);
+            this.btnAddTab.TabIndex = 4;
+            this.btnAddTab.Text = "Add Tab";
+            this.btnAddTab.UseVisualStyleBackColor = false;
+            this.btnAddTab.Click += new System.EventHandler(this.btnAddTab_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,24 +137,28 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(531, 279);
             this.ControlBox = false;
+            this.Controls.Add(this.btnAddTab);
+            this.Controls.Add(this.tcButtonHousing);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddButton);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Main_MouseDown);
+            this.tcButtonHousing.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnAddButton;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TabControl tcButtonHousing;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button btnAddTab;
     }
 }
 

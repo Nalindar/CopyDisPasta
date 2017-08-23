@@ -4,7 +4,7 @@ ACClient Ver. | Go to your AC folder (default C:\\Turbine\\Asheron's Call) and r
 Non-TN GoArrow | Open your GoArrow -> Click Atlas -> Click the Update Tab -> Paste in http://maps.roogon.com/downloads/data_cod_Non_TN.xml in the URL box -> Click the Update button.
 QuestStatus | http://aka-steve.com/helpdocs -> Check out the PhatAC Quest Status document link. It's a google doc with tabs across the bottom for quest type with the status of tested quests.
 BundleGuide | Beginner Bundle Guide - http://www.virindi.net/wiki/index.php/BeginnerBundleGuide
-Looting/Profile | Guide -> http://www.virindi.net/wiki/index.php/BeginnerBundleGuide#Virindi_Classic_Looter | Profile with many trophies already added -> http://immortalbob.com/phpBB3/viewtopic.php?f=4&t=3
+Looting/Profile | Guide -> http://www.virindi.net/wiki/index.php/BeginnerBundleGuide#Virindi_Classic_Looter -> Profile with many trophies already added -> http://immortalbob.com/phpBB3/viewtopic.php?f=4&t=3
 ChaosControl | ChaosControl meta -> http://www.immortalbob.com/phpBB3/viewtopic.php?f=6&t=214 
 IBControl | IBControl meta -> http://www.immortalbob.com/phpBB3/viewtopic.php?f=6&t=500
 ChaosHelper | ChaosHelper HUD plugin -> http://www.immortalbob.com/phpBB3/viewtopic.php?f=6&t=282
@@ -12,3 +12,4 @@ MiniMap | Need both: Radar Addon VVS ->  http://virindi.net/plugins/files/get.ph
 Treestats | Treestats -> http://treestats.net/
 Population | Population graph -> http://treestats.net/player_counts/
 Feb2010 DX | Make a c:\directx folder -> download the feb 2010 directx runtimes https://www.microsoft.com/en-us/download/confirmation.aspx?id=9033 -> unzip to the folder you made. Run DXSETUP.exe
+hi|hi

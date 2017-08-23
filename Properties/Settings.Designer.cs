@@ -26,24 +26,48 @@ namespace CopyDisPasta.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
-        public global::System.Drawing.Point WindowLocation {
+        public global::System.Drawing.Point MainWindowLocation {
             get {
-                return ((global::System.Drawing.Point)(this["WindowLocation"]));
+                return ((global::System.Drawing.Point)(this["MainWindowLocation"]));
             }
             set {
-                this["WindowLocation"] = value;
+                this["MainWindowLocation"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
-        public global::System.Drawing.Size WindowSize {
+        public global::System.Drawing.Size MainWindowSize {
             get {
-                return ((global::System.Drawing.Size)(this["WindowSize"]));
+                return ((global::System.Drawing.Size)(this["MainWindowSize"]));
             }
             set {
-                this["WindowSize"] = value;
+                this["MainWindowSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point ButtonEditorLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["ButtonEditorLocation"]));
+            }
+            set {
+                this["ButtonEditorLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size ButtonEditorSize {
+            get {
+                return ((global::System.Drawing.Size)(this["ButtonEditorSize"]));
+            }
+            set {
+                this["ButtonEditorSize"] = value;
             }
         }
     }

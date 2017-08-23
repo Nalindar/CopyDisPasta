@@ -50,6 +50,13 @@
     <Reference Include="UIAutomationClient" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButtonEditor.Designer.cs">
+      <DependentUpon>ButtonEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonSet.cs" />
     <Compile Include="CopyPasta.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -59,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ButtonEditor.resx">
+      <DependentUpon>ButtonEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
