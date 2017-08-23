@@ -174,6 +174,7 @@ namespace CopyDisPasta
         {
             _ignoreMove = true;
             this.cboLocation.SelectedIndex = Properties.Settings.Default.MainWindowDockLocation;
+            this.chkbxAutoEnter.Checked = Properties.Settings.Default.AutoSendMessage;
             LoadWindowPosition();
             LoadButtons("");
             _ignoreMove = false;
