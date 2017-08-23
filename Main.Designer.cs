@@ -68,7 +68,7 @@
             this.tcButtonHousing.Location = new System.Drawing.Point(12, 49);
             this.tcButtonHousing.Name = "tcButtonHousing";
             this.tcButtonHousing.SelectedIndex = 0;
-            this.tcButtonHousing.Size = new System.Drawing.Size(560, 273);
+            this.tcButtonHousing.Size = new System.Drawing.Size(560, 282);
             this.tcButtonHousing.TabIndex = 3;
             // 
             // tabPage1
@@ -76,7 +76,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(552, 247);
+            this.tabPage1.Size = new System.Drawing.Size(552, 256);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(499, 192);
+            this.tabPage2.Size = new System.Drawing.Size(552, 247);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@
             // 
             // cboLocation
             // 
-            this.cboLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cboLocation.FormattingEnabled = true;
-            this.cboLocation.Location = new System.Drawing.Point(359, 22);
+            this.cboLocation.Location = new System.Drawing.Point(12, 373);
             this.cboLocation.Name = "cboLocation";
             this.cboLocation.Size = new System.Drawing.Size(121, 21);
             this.cboLocation.TabIndex = 4;
@@ -125,10 +125,10 @@
             // 
             // lblDockLocation
             // 
-            this.lblDockLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDockLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDockLocation.AutoSize = true;
             this.lblDockLocation.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblDockLocation.Location = new System.Drawing.Point(362, 6);
+            this.lblDockLocation.Location = new System.Drawing.Point(13, 357);
             this.lblDockLocation.Name = "lblDockLocation";
             this.lblDockLocation.Size = new System.Drawing.Size(116, 13);
             this.lblDockLocation.TabIndex = 5;
@@ -136,9 +136,10 @@
             // 
             // chkbxAutoEnter
             // 
+            this.chkbxAutoEnter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkbxAutoEnter.AutoSize = true;
             this.chkbxAutoEnter.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.chkbxAutoEnter.Location = new System.Drawing.Point(118, 20);
+            this.chkbxAutoEnter.Location = new System.Drawing.Point(16, 337);
             this.chkbxAutoEnter.Name = "chkbxAutoEnter";
             this.chkbxAutoEnter.Size = new System.Drawing.Size(127, 17);
             this.chkbxAutoEnter.TabIndex = 6;
@@ -151,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(584, 334);
+            this.ClientSize = new System.Drawing.Size(584, 406);
             this.ControlBox = false;
             this.Controls.Add(this.chkbxAutoEnter);
             this.Controls.Add(this.lblDockLocation);
@@ -161,7 +162,7 @@
             this.Controls.Add(this.btnAddButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(600, 350);
+            this.MinimumSize = new System.Drawing.Size(200, 200);
             this.Name = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
