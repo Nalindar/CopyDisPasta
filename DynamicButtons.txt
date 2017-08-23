@@ -12,4 +12,3 @@ MiniMap | Need both: Radar Addon VVS ->  http://virindi.net/plugins/files/get.ph
 Treestats | Treestats -> http://treestats.net/
 Population | Population graph -> http://treestats.net/player_counts/
 Feb2010 DX | Make a c:\directx folder -> download the feb 2010 directx runtimes https://www.microsoft.com/en-us/download/confirmation.aspx?id=9033 -> unzip to the folder you made. Run DXSETUP.exe
-hi|hi
