@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace CopyDisPasta
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         private ButtonSet _AllButtons;
+        private bool _ignoreMove;
 
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -27,19 +29,72 @@ namespace CopyDisPasta
         public Main()
         {
             InitializeComponent();
+            this.cboLocation.Items.Add("Right");
+            this.cboLocation.Items.Add("Bottom");
+            this.cboLocation.Items.Add("Left");
+            this.cboLocation.Items.Add("Top");
+            this.cboLocation.Items.Add("User Defined");
         }
 
         private void LoadWindowPosition()
         {
-            if(Settings.Default.MainWindowLocation != null && Settings.Default.MainWindowSize.Height != 0 && Settings.Default.MainWindowSize.Width != 0)
+            WindowRect.RECT myRect;
+            var discordWindow = CopyPasta.GetDiscordWindow();
+            if(discordWindow != null)
             {
-                this.Location = Settings.Default.MainWindowLocation;
+                WindowRect.GetWindowRect(new HandleRef(this, discordWindow), out myRect);
+                AlignMainWindow(myRect);
+            }
+            if(Settings.Default.MainWindowSize.Height != 0 && Settings.Default.MainWindowSize.Width != 0)
+            {
                 this.Size = Settings.Default.MainWindowSize;
             }
+        }
+        private void AlignMainWindow(WindowRect.RECT discordRect)
+        {
+            Point newPoint = new Point();
+            switch (Properties.Settings.Default.MainWindowDockLocation)
+            {
+                case 0:
+                    newPoint = new Point(discordRect.Right, discordRect.Top);
+                    break;
+                case 1:
+                    newPoint = new Point(discordRect.Left, discordRect.Bottom);
+                    break;
+                case 2:
+                    newPoint = new Point(discordRect.Left - this.Width, discordRect.Top);
+                    break;
+                case 3:
+                    newPoint = new Point(discordRect.Left, discordRect.Top - this.Height);
+                    break;
+                case 4:
+                    newPoint = Settings.Default.MainWindowLocation;
+                    break;
+
+
+            }
+            if (!IsOnScreen(newPoint) && !IsOnScreen(new Point(newPoint.X+14, newPoint.Y))) { return; }
+//            if (newPoint.Y < 0) { newPoint.Y = 0; }
+
+
+            //            if (newPoint.X < Screen.PrimaryScreen.WorkingArea.X) { newPoint.X = Screen.PrimaryScreen.WorkingArea.X; }
+            this.Location = newPoint;
+        }
+        private static bool IsOnScreen(Point pt)
+        {
+            //TODO: Real onscreen check
+            //return true;
+
+            foreach (var screen in Screen.AllScreens)
+            {
+                if (screen.WorkingArea.Contains(pt)) { return true; }
+            }
+            return false;
         }
 
         private void SaveWindowPosition()
         {
+            Settings.Default.MainWindowDockLocation = this.cboLocation.SelectedIndex;
             Settings.Default.MainWindowLocation = this.Location;
             Settings.Default.MainWindowSize = this.Size;
             Settings.Default.Save();
@@ -117,8 +172,11 @@ namespace CopyDisPasta
 
         private void Main_Load(object sender, EventArgs e)
         {
+            _ignoreMove = true;
+            this.cboLocation.SelectedIndex = Properties.Settings.Default.MainWindowDockLocation;
             LoadWindowPosition();
             LoadButtons("");
+            _ignoreMove = false;
         }
 
         private void btnAddButton_Click(object sender, EventArgs e)
@@ -177,12 +235,27 @@ namespace CopyDisPasta
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Properties.Settings.Default.MainWindowDockLocation = this.cboLocation.SelectedIndex;
             SaveWindowPosition();
         }
 
         private void btnAddTab_Click(object sender, EventArgs e)
         {
             this.tcButtonHousing.TabPages.Add(Guid.NewGuid().ToString().Substring(1, 6));
+        }
+
+        private void cboLocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(!_ignoreMove)
+            {
+                SaveWindowPosition();
+                LoadWindowPosition();
+            }
+        }
+
+        private void chkbxAutoEnter_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.AutoSendMessage = chkbxAutoEnter.Checked;
         }
     }
 }

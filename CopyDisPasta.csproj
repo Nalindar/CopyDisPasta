@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="ButtonSet.cs" />
     <Compile Include="CopyPasta.cs" />
+    <Compile Include="WindowRect.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

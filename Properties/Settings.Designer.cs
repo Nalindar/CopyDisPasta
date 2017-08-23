@@ -70,5 +70,29 @@ namespace CopyDisPasta.Properties {
                 this["ButtonEditorSize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MainWindowDockLocation {
+            get {
+                return ((int)(this["MainWindowDockLocation"]));
+            }
+            set {
+                this["MainWindowDockLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutoSendMessage {
+            get {
+                return ((bool)(this["AutoSendMessage"]));
+            }
+            set {
+                this["AutoSendMessage"] = value;
+            }
+        }
     }
 }

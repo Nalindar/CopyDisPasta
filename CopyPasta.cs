@@ -15,6 +15,7 @@ namespace CopyDisPasta
             SetFocusToDiscord();
             SendKeys.Send("{TAB}");
             SendKeys.Send("^V");
+            if(Properties.Settings.Default.AutoSendMessage) { SendKeys.Send("{ENTER}"); }
         }
         
         public static void SetFocusToDiscord()
@@ -35,6 +36,21 @@ namespace CopyDisPasta
             {
                 MessageBox.Show("Please open discord.", "Discord was not identified as open.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        public static IntPtr GetDiscordWindow()
+        {
+            Process[] discordProcs = Process.GetProcessesByName("discord");
+
+            var nullPtr = new IntPtr();
+            if (discordProcs.Length == 0) { return nullPtr; }
+            foreach(var proc in discordProcs)
+            {
+                if(proc.MainWindowHandle != nullPtr)
+                { return proc.MainWindowHandle; }
+            }
+            return nullPtr;
+
         }
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
