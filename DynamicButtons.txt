@@ -22,3 +22,21 @@ ThwargPG|PHeal|#!pheal
 ThwargPG|Inventory|#!inv
 ThwargPG|Stats|#!stats
 ThwargPG|Skills|#!skills
+PokeWorld|WhereAmI|pw!whereami
+PokeWorld|PokeCenter Heal|pw!pokecenter heal
+PokeWorld|Mart|pw!pokemart
+PokeWorld|Backpack|pw!backpack
+PokeWorld|Explore|pw!go explore
+PokeWorld|North|pw!travel north
+PokeWorld|East|pw!travel east
+PokeWorld|South|pw!travel south
+PokeWorld|West|pw!travel west
+PokeWorld|Attack|pw!hit
+PokeWorld|Trainer Info|pw!trainer
+PokeWorld|Belt|pw!belt
+PokeWorld|Battle|pw!battle
+PokeWorld|Run|pw!run
+PokeWorld|Pokeball|pw!throwball pokeball
+PokeWorld|Greatball|pw!throwball greatball
+PokeWorld|Ultraball|pw!throwball ultraball
+PokeWorld|Pokedex|pw!pokedex
