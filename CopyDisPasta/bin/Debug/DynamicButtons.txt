@@ -1,0 +1,3 @@
+﻿Burst|TurboPlotter|TurboPlotter - http://blackpawn.com/tp/
+Burst|Faucet|Single use burst faucet to get started - https://faucet.burstpay.net/
+Burst|Monitor|BTFG Desktop Monitor - https://github.com/javajohnHub/BtfgMonitorDesktop/releases

@@ -1,0 +1,12 @@
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\bin\Release\DynamicButtons.txt
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\bin\Release\CopyDisPasta.exe.config
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\bin\Release\CopyDisPasta.exe
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\bin\Release\CopyDisPasta.pdb
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\obj\Release\CopyDisPasta.csprojAssemblyReference.cache
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\obj\Release\CopyDisPasta.ButtonEditor.resources
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\obj\Release\CopyDisPasta.Main.resources
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\obj\Release\CopyDisPasta.Properties.Resources.resources
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\obj\Release\CopyDisPasta.csproj.GenerateResource.cache
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\obj\Release\CopyDisPasta.csproj.CoreCompileInputs.cache
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\obj\Release\CopyDisPasta.exe
+D:\Nalindar\Desktop\GitHub\CopyDisPasta\obj\Release\CopyDisPasta.pdb
